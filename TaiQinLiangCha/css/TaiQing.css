@@ -1,0 +1,200 @@
+body{
+    min-width: 1200px;
+}
+
+/*header*/
+nav{
+    height: 650px;
+    background: url("../images/headerBack.jpg") #000106;
+    background-size: cover;
+    /*float: left;*/
+    //width: 100%;
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+nav ul{
+    clear: left;
+    float: left;
+    position: relative;
+    left: 50%;
+    top: 95%;
+}
+
+nav ul li{
+    margin: 0 20px;
+    display: block;
+    float: left;
+    position: relative;
+    right: 50%;
+}
+nav ul li a{
+    line-height: 2em;
+    font-size: 16px;
+}
+
+nav ul li a:link{
+    color: #FEF14A;
+    text-decoration: none;
+}
+
+nav ul li a:visited{
+    color: #FEF14A;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #FEF14A;
+    text-decoration: none;
+}
+
+nav ul li a:active{
+    color: #FEF14A;
+    text-decoration: none;
+}
+
+.middle{
+    background-color: #F6F5F3;
+}
+
+/*循环滚动图片设置*/
+.middle #slideShow .item .show{
+    padding: 2em 0 4em 0;
+}
+
+.middle #slideShow .item .container{
+    min-width: 1200px;
+}
+
+.middle #slideShow .item .show img{
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+}
+
+.middle #slideShow .item .show .capital{
+    text-align: center;
+    color: #828282;
+}
+
+#slideShow .item .show .capital h2{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.middle #slideShow .carousel-control{
+    width: 7%;
+}
+
+.middle #slideShow .carousel-control i{
+    position: relative;
+    top: 50%;
+}
+/*完成slideShow的设置*/
+
+.middle .recommend img{
+    display: block;
+    margin: 0 auto;
+}
+
+.middle .environment img{
+    display: block;
+    margin: 3em auto;
+}
+
+/*start-鼠标进入展示*/
+.middle .hoverShow .container {
+    width: 980px;
+    height: 540px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.middle .hoverShow .container .col{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.middle .hoverShow .container img{
+    width: 800px;
+    position: relative;
+    left: -200px
+}
+/*end-鼠标进入展示*/
+
+/*footer*/
+footer{
+    padding-top: 2em;
+}
+
+footer .one{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    height: 220px;
+    overflow: hidden;
+}
+
+footer .one div{
+    float: left;
+}
+
+footer .brand img{
+    height: 350px;
+}
+
+footer .profile{
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 2em;
+    margin-left: 2em;
+    padding-top: 1em;
+}
+
+footer .footerSection{
+    font-size: 13px;
+    text-align: center;
+    margin: 0 3.5em;
+}
+
+footer .footerSection h2{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+footer .footerSection li a{
+    color: #000;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+footer .one .tel{
+    float: right;
+}
+
+footer .one .tel img{
+    width: 300px;
+}
+
+footer .copyRight{
+    text-align: center;
+    color: #8A6F61;
+    margin-top: 4em;
+}
+
+footer .copyRight li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+footer .copyRight li img{
+    width: 30px;
+    border-radius: 50%;
+    background-color: #AAAAAA;
+    padding: 5px;
+}
