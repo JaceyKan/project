@@ -24,8 +24,13 @@
       <file leaf-file-name="TaiQing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../TaiQingLiangCha/TaiQing.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
             <state relative-caret-position="1248">
               <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+=======
+            <state relative-caret-position="240">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -43,8 +48,8 @@
       <file leaf-file-name="TaiQing.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TaiQingLiangCha/css/TaiQing.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="520">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -122,6 +127,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
+=======
+      <pane id="Scratches" />
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,7 +211,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
       <pane id="Scratches" />
+=======
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
       <pane id="Scope" />
     </panes>
   </component>
@@ -301,11 +313,16 @@
       <workItem from="1492745474169" duration="28913000" />
       <workItem from="1493083256188" duration="6739000" />
       <workItem from="1493090283315" duration="12166000" />
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
       <workItem from="1493116116701" duration="741000" />
+=======
+      <workItem from="1493117597581" duration="2273000" />
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
     <option name="totallyTimeSpent" value="48559000" />
   </component>
   <component name="ToolWindowManager">
@@ -313,6 +330,15 @@
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1721557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="50091000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="578" y="5" width="1352" height="1030" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20658682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -380,6 +406,39 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../TaiQingLiangCha/TaiQing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#br#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/TaiQing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TaiQing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaiQing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1014">
           <caret line="134" column="58" selection-start-line="134" selection-start-column="58" selection-end-line="134" selection-end-column="58" />
@@ -541,8 +600,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../TaiQingLiangCha/TaiQing.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:TaiQingLiangCha/.idea/workspace.xml
         <state relative-caret-position="1248">
           <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+=======
+        <state relative-caret-position="240">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+>>>>>>> master:TaiQinLiangCha/.idea/workspace.xml
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -558,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../TaiQingLiangCha/css/TaiQing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="520">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
