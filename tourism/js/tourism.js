@@ -24,4 +24,17 @@ $(document).ready(function(){
 
     });
 
+    $(".productWrap").mouseenter(function(){
+        $(this).find(".lookDetail").animate({
+            "bottom": "0"
+        });
+
+        // $(this).find(".product").animate({
+        //     "top": "-1em"
+        // });
+
+
+
+    });
+
 });
