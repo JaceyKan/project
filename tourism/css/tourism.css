@@ -53,33 +53,63 @@
 /*end热点板块*/
 
 /*begin产品板块*/
-#products{
-    //background-color: #E7E7E7;
-}
-
 #products .tab-content{
     padding: 2em 0;
 }
 
-#products .imageAnimation{
+#products [class*=col]{
     overflow: hidden;
 }
-#products .imageAnimation img{
-    width: 100%;
-}
+
 .productWrap{
      overflow: hidden;
-    box-shadow: -10px 10px 30px 5px #e7e7e7;
-    -moz-box-shadow: -10px 10px 30px 5px #e7e7e7;
-    -webkit-box-shadow: -10px 10px 30px 5px #e7e7e7;
-    -o-box-shadow: -10px 10px 30px 5px #e7e7e7;
+    box-shadow: 0 0 1em 0.5em  rgba(200,200,200,0.2);
+    -moz-box-shadow: 0 0 1em 0.5em  rgba(200,200,200,0.2);
+    -webkit-box-shadow: 0 0 1em 0.5em  rgba(200,200,200,0.2);
+    -o-box-shadow:  0 0 1em 0.5em  rgba(200,200,200,0.2);
+    margin-bottom: 2em;
 }
 
 .product{
     position: relative;
-    //border: 2px solid red;
     overflow: hidden;
 }
+
+/*begin图片动画*/
+.imageAnimation{
+    position: relative;
+    overflow: hidden;
+}
+
+.imageAnimation img{
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.imageAnimation .imgCover{
+    display: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.imageAnimation .coverPlus{
+    background-color: #0072D4;
+    color: #fff;
+    font-size: 2em;
+    line-height: 1em;
+    padding: 0.2em 0.4em;
+    z-index: 3;
+    position: absolute;
+    bottom: -100%;
+    right: 10%;
+}
+/*end图片动画*/
 
 .product a.caption{
     text-decoration: none;
@@ -89,12 +119,17 @@
 .product h3{
     font-size: 0.9em;
     padding: 0 1em;
+    height: 2.5em;
+    line-height: 1.2em;
+    overflow: hidden;
 }
 
 .product p{
     color: #7B7B7B;
     font-size: 0.8em;
     line-height: 1.5em;
+    height: 4.5em;
+    overflow: hidden;
     padding: 0 1em;
 }
 
@@ -111,9 +146,456 @@
 .product a.lookDetail{
     background-color: #0072D4;
     color: #fff;
-    height: 3em;
-    line-height: 3em;
+    line-height: 2.5em;
     position: relative;
-    bottom: -3em;
+    bottom: -5em;
 }
 
+#products a.more{
+    display: block;
+    width: 20em;
+    margin: 3em auto;
+    padding: 0.5em 5em;
+    box-shadow: 0 0.4em 1em rgba(200,200,200,0.8);
+    -moz-box-shadow: 0 0.4em 1em rgba(200,200,200,0.8);
+    -webkit-box-shadow: 0 0.4em 1em rgba(200,200,200,0.8);
+    -o-box-shadow: 0 0.4em 1em rgba(200,200,200,0.8);
+    overflow: hidden;
+}
+
+#products a.more i{
+    color: rgba(200,200,200,1);
+    position: relative;
+    //top: 2em;
+    //bottom: -2em;
+}
+/*end产品板块*/
+
+/*begin关于我们板块*/
+#aboutUs{
+    background-image: url("../images/aboutUs/aboutUs.jpg");
+    background-size: cover;
+    padding: 7em 0;
+}
+
+#aboutUs #profile{
+    width: 50%;
+    background-color: #fff;
+    padding: 2em 3em;
+    float: right;
+    position: relative;
+}
+
+#aboutUs #imgWrap{
+    position: absolute;
+    top: -10%;
+    right: 95%;
+    box-shadow: 0.5em 1em 1em rgba(0,0,0,0.3);
+    width: 105%;
+}
+
+#aboutUs #imgWrap img{
+    width: 100%;
+}
+/*end关于我们板块*/
+
+/*begin热销推荐板块*/
+#bestSellersRecommend .sellersWrap{
+    background-color: #EDF3F5;
+    padding: 3em 2em 4em 2em;
+}
+
+#bestSellersRecommend [class*=col]{
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+#bestSellersRecommend .profile{
+    background-color: #fff;
+    padding: 1em;
+}
+
+#bestSellersRecommend .profile h3{
+    font-size: 1.1em;
+    height: 3em;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+#bestSellersRecommend .profile a{
+    color: #000;
+    text-decoration: none;
+}
+
+#bestSellersRecommend .profile a:hover{
+    color: #0072D4;
+}
+
+#bestSellersRecommend .profile p{
+    height: 6em;
+}
+
+#bestSellersRecommend img{
+    width: 100%;
+}
+
+#bestSellersRecommend .imgWrap{
+    position: relative;
+    overflow: hidden;
+}
+
+#bestSellersRecommend .imgCover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+#bestSellersRecommend .coverPlus{
+    position: absolute;
+    bottom: -50%;
+    right: 10%;
+    background-color: #0072D4;
+    padding: 0.3em 0.7em;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#bestSellersRecommend #imgLeft{
+    position: relative;
+    margin-right: 1em;
+}
+
+
+#bestSellersRecommend #imgInfo{
+    color: #fff;
+    background-color:  rgba(0,101,189,1);
+    padding: 30% 2em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+
+/*begin设置背景色渐变按钮*/
+.gradientBgBtn{
+    display: block;
+    width: 30%;
+    min-width: 6em;
+    margin: 2em auto;
+    padding: 0.5em 1em;
+    color: #efefef;
+    border: 1px solid #efefef;
+    position: relative;
+    overflow: hidden;
+    background-color:  rgba(0,101,189,1);
+}
+
+.gradientBgBtn:hover{
+    color: #fff;
+}
+
+.gradientBgBtn .getLongBg{
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+}
+/*end设置背景色渐变按钮*/
+
+/*begin团队板块*/
+#team{
+    padding: 3em 0 8em 0;
+}
+
+#team img{
+    width: 100%;
+}
+
+#team .curPerson{
+    padding: 2em 1em;
+}
+
+
+#team .teamMember h3{
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin: 1em 0 0 1em;
+}
+
+#team .teamMember p{
+    margin: 0 0 0 1em;
+}
+
+#team .teamMember .row{
+    padding: 0;
+    margin: 0;
+}
+
+#team .teamMember .row [class*=col]{
+    padding: 0;
+}
+
+#team ul{
+    padding: 0;
+}
+
+#team ul li{
+    display: block;
+    list-style: none;
+    padding: 1em;
+    border-bottom: 1px solid #efefef;
+    color: #777777;
+}
+
+#team ul .curLi{
+    color: #fff;
+    background-color: #0072D4;
+}
+
+#team i.fa{
+    display: block;
+    width: 10%;
+    margin: 0 auto;
+    color: #efefef;
+}
+
+#team i.fa:hover{
+    color: rgba(0,101,189,1);
+}
+
+#team ul .lastSection{
+    border: none;
+}
+
+#team .hideMember{
+    display: none;
+}
+/*end团队板块*/
+
+/*begin数据板块*/
+#data{
+    background-image: url("../images/dataBackground.jpg");
+    background-size: cover;
+    padding: 3em 1em;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+
+#data [class*=col]{
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+#data [class*=col]:last-child{
+    border: none;
+}
+
+#data span{
+    font-size: 3em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #data [class*=col]:nth-child(1){
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 1em;
+    }
+    #data [class*=col]:nth-child(2){
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-right: none;
+        padding-bottom: 1em;
+    }
+}
+/*end数据板块*/
+
+/*begin酒店板块*/
+#hotel h2{
+    text-align: center;
+    padding-top: 1.5em;
+    line-height: 1.2em;
+}
+
+#hotelTabContent{
+    padding: 5em 0;
+    background-color: #EDF3F5;
+}
+
+.hotel{
+    position: relative;
+    margin-bottom: 1em;
+    box-shadow: 0 5px 10px  rgba(0,0,0,0.3);
+}
+
+.hotelImg{
+    position: relative;
+    width: 55%;
+}
+
+.hotelImg img{
+    width: 100%;
+}
+
+.hotelImg .imgHoverOutside{
+    border: 0 solid #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hotelImg .imgHoverInside{
+    border: 0 solid rgba(255,255,255,0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hotel .hotelDetail{
+    position: absolute;
+    top: 0;
+    left: 55%;
+    bottom: 0;
+    padding: 2em 1em;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.hotelDetail h3{
+    font-size: 1.1em;
+    max-height: 1em;
+    overflow: hidden;
+    margin: 0 0 0.5em 0;
+}
+
+.hotelDetail h3 a{
+    color: #000;
+    text-decoration: none;
+}
+
+.hotelDetail p{
+    font-size: 1em;
+    color: #969696;
+    max-height: 3em;
+    overflow: hidden;
+}
+
+.hotelDetail a.btn{
+    min-width: 8em;
+    position: absolute;
+    bottom: 10%;
+    padding: 0.3em 2em;
+    color: #969696;
+    background-color: #fff;
+}
+/*end酒店板块*/
+
+/*begin联系我们板块*/
+#contact{
+    padding: 3em 0;
+}
+
+#contact [class*=col]{
+    padding: 3em 0;
+}
+
+#contact .address{
+    //border: 1px solid red;
+    //padding: 0 1em;
+}
+#contact .address h3{
+    font-size: 1.2em;
+}
+
+#contact .address .contactInfo{
+    margin: 1.5em 0;
+}
+#contact .address .contactInfo li{
+    margin: 0.5em 0;
+}
+#contact .address .contactMedia{
+
+    margin: 0;
+}
+#contact .address .contactMedia a{
+    border-radius: 50%;
+    padding: 0.5em;
+    line-height: 3em;
+    background-color: #C9C9C9;
+    color: #fff;
+}
+#contact .address .contactMedia a:hover{
+    background-color: #0072D4;
+}
+
+#weixinImg img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+#contact form input, #contact form textarea{
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 0;
+    box-shadow: none;
+    resize: none;
+}
+
+#contact form input:hover, #contact form textarea:hover{
+    border-bottom: 1px solid #0072D4;
+}
+
+#contact form button{
+    background-color: #E9E9E9;
+    border: none;
+    box-shadow: none;
+}
+
+#contact form button:hover{
+    background-color: #0072D4;
+    color: #fff;
+}
+/*end联系我们板块*/
+
+
+/*begin通用*/
+/*begin 上下浮动按钮*/
+.upAndDownBtn{
+    display: block;
+    color: #969696;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+    background-color: #fff;
+    width: 50%;
+    max-width: 15em;
+    margin: 2em auto;
+    overflow: hidden;
+    padding: 0.3em;
+}
+
+.upAndDownBtn:hover{
+    color: #969696;
+    text-decoration: none;
+}
+
+.upAndDownBtn i{
+    position: relative;
+}
+/*end 上下浮动按钮*/
+
+/*end通用*/
