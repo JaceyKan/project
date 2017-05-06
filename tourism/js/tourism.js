@@ -341,6 +341,94 @@ $(document).ready(function(){
     });
     // end酒店板块
 
+    //begin联系我们板块
+    $("[data-toggle='tooltip']").tooltip();
+
+    $("#content").blur(function (e) {
+        var pattern=/^\w{1,10}$/gi;
+        var contentValue=$(this).val();
+
+        if(!pattern.test(contentValue)){
+            $(this).attr({
+                "data-original-title": "<i class='fa fa-star'></i> 内容为必填项且不能超过500字"
+            }).tooltip("show");
+        }
+    }).focus(function () {
+        $(this).removeAttr("data-original-title").tooltip("hide");
+    });
+
+    $("#contact button").click(function () {
+        $("form *").blur();
+    });
+
+    // begin必填性测试
+    function mustWrite(curElement){
+        var pattern=/^\s*$/gi;
+        if( pattern.test(curElement.val()) ){
+            return "必填项";
+        }
+        return "";
+    }
+    // end必填性测试
+
+    //begin 邮箱测试
+    function emailTest(curElement){
+        var emailPattern=/^\w+@\w+$/gi;
+        var spacePatter=/^\s*$/gi;
+        var testValue=curElement.val();
+
+        //不为空的情况下再测试邮箱格式是否正确
+        //验证格式的前提是被测试的字符串不为空
+        if(!spacePatter.test(testValue)){
+            if(!emailPattern.test(testValue)){
+                return "邮箱格式不正确";
+            }
+        }
+
+        return "";
+    }
+    //end 邮箱测试
+
+    // begin测试
+    function testVal(curElement,must,email){
+        curElement.blur(function () {
+            //验证格式的前提是被测试的字符串不为空
+            var result="";
+            if(email){ //验证邮箱
+                result+=emailTest($(this));
+            }
+            //console.log(result);
+
+            if(must){   //验证必填项
+                result+=mustWrite($(this));
+                // var myMust=mustWrite($(this));
+                // if(myMust!==""){
+                //     result=myMust;
+                // }
+                //console.log(result);
+            }
+
+            //如果结果为空字符串，则表示要验证的项都符合要求
+            //不需要提示信息
+            if(result===""){
+                return;
+            }
+
+            result="<i class='fa fa-exclamation-circle'></i> "+result;
+            $(this).attr({
+                "data-original-title": result
+            }).tooltip("show");
+        }).focus(function () {
+            $(this).removeAttr("data-original-title").tooltip("hide");
+        });
+    }
+    // end测试
+
+
+    testVal($("#name"),true,false);  //测试姓名的必填性
+    testVal($("#email"),true,true);  //测试邮箱的必填性和格式
+    testVal($("#tel"),true,false);  //测试电话的必填性
+
     /*begin通用*/
     /*begin 上下浮动按钮*/
     $(".upAndDownBtn").mouseenter(function () {
@@ -365,7 +453,6 @@ $(document).ready(function(){
         });
     });
     /*end 上下浮动按钮*/
-
 
     /*end通用*/
 
