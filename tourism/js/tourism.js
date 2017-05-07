@@ -344,21 +344,13 @@ $(document).ready(function(){
     //begin联系我们板块
     $("[data-toggle='tooltip']").tooltip();
 
-    $("#content").blur(function (e) {
-        var pattern=/^\w{1,10}$/gi;
-        var contentValue=$(this).val();
-
-        if(!pattern.test(contentValue)){
-            $(this).attr({
-                "data-original-title": "<i class='fa fa-star'></i> 内容为必填项且不能超过500字"
-            }).tooltip("show");
-        }
-    }).focus(function () {
-        $(this).removeAttr("data-original-title").tooltip("hide");
-    });
-
+    //提交按钮
     $("#contact button").click(function () {
         $("form *").blur();
+        //console.log($("#email").attr("data-original-title"));
+        if(!$("#email").attr("data-original-title")){
+            alert("success");
+        }
     });
 
     // begin必填性测试
@@ -384,13 +376,27 @@ $(document).ready(function(){
                 return "邮箱格式不正确";
             }
         }
-
         return "";
     }
     //end 邮箱测试
 
-    // begin测试
-    function testVal(curElement,must,email){
+    // begin字数测试
+    function stringLengthTest(testString,length){
+        //注意在用构造函数创建正则表达式时，元字符需要转义
+        //var pattern=/^\s*(.|\n){0,10}\s*$/gi;
+        var pattern=new RegExp("^\\s\*\(\.\|\\n\){0,"+length+"}\\s\*$","gi");
+        var flag=pattern.test(testString);
+        console.log(testString);
+        console.log(testString.length);
+        if( !flag ){
+            return "不能超过"+length+"个字";
+        }
+        return "";
+    }
+    // end字数测试
+
+    // begin总测试
+    function testVal(curElement,must,email,stringLength){
         curElement.blur(function () {
             //验证格式的前提是被测试的字符串不为空
             var result="";
@@ -401,11 +407,15 @@ $(document).ready(function(){
 
             if(must){   //验证必填项
                 result+=mustWrite($(this));
-                // var myMust=mustWrite($(this));
-                // if(myMust!==""){
-                //     result=myMust;
-                // }
+            }
+
+            if(stringLength){  //验证字数
+                //验证字符串的长度要放在其他验证之后
+                //在其它验证满足的情况下再验证
                 //console.log(result);
+                if(result===""){
+                    result=stringLengthTest(curElement.val(),stringLength);
+                }
             }
 
             //如果结果为空字符串，则表示要验证的项都符合要求
@@ -422,12 +432,13 @@ $(document).ready(function(){
             $(this).removeAttr("data-original-title").tooltip("hide");
         });
     }
-    // end测试
+    // end总测试
 
 
     testVal($("#name"),true,false);  //测试姓名的必填性
     testVal($("#email"),true,true);  //测试邮箱的必填性和格式
     testVal($("#tel"),true,false);  //测试电话的必填性
+    testVal($("#content"),true,false,10);  //测试内容的必填性，且字数不能超过100字
 
     /*begin通用*/
     /*begin 上下浮动按钮*/
