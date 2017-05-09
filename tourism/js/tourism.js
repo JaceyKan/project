@@ -342,14 +342,21 @@ $(document).ready(function(){
     // end酒店板块
 
     //begin联系我们板块
-    $("[data-toggle='tooltip']").tooltip();
+    $("[data-toggle='tooltip']").tooltip(); // BootStrap启动提示功能
 
     //提交按钮
     $("#contact button").click(function () {
         $("form *").blur();
-        //console.log($("#email").attr("data-original-title"));
-        if(!$("#email").attr("data-original-title")){
-            alert("success");
+
+        var flag=!($("#name").attr("data-original-title")) &&
+            !($("#email").attr("data-original-title")) &&
+            !($("#tel").attr("data-original-title")) &&
+            !($("#content").attr("data-original-title"));
+        // console.log(!$("#name").attr("data-original-title"));
+        // console.log($("#email").attr("data-original-title"));
+        // console.log(flag);
+        if(flag){
+            alert("提交成功！");
         }
     });
 
@@ -365,7 +372,7 @@ $(document).ready(function(){
 
     //begin 邮箱测试
     function emailTest(curElement){
-        var emailPattern=/^\w+@\w+$/gi;
+        var emailPattern=/^.+@.+$/gi;
         var spacePatter=/^\s*$/gi;
         var testValue=curElement.val();
 
@@ -386,8 +393,8 @@ $(document).ready(function(){
         //var pattern=/^\s*(.|\n){0,10}\s*$/gi;
         var pattern=new RegExp("^\\s\*\(\.\|\\n\){0,"+length+"}\\s\*$","gi");
         var flag=pattern.test(testString);
-        console.log(testString);
-        console.log(testString.length);
+        //console.log(testString);
+        //console.log(testString.length);
         if( !flag ){
             return "不能超过"+length+"个字";
         }
@@ -395,18 +402,33 @@ $(document).ready(function(){
     }
     // end字数测试
 
+    // begin数字测试
+    function digitTest(testString){
+        var pattern=/^\s*\d*\s*$/;
+        var flag=pattern.test(testString);
+        if(!flag){
+            return "只能输入数字";
+        }
+        return "";
+    }
+    // end数字测试
+
     // begin总测试
-    function testVal(curElement,must,email,stringLength){
+    function testVal(curElement,must,email,stringLength,digit){
         curElement.blur(function () {
             //验证格式的前提是被测试的字符串不为空
             var result="";
             if(email){ //验证邮箱
-                result+=emailTest($(this));
+                result+=emailTest(curElement);
             }
             //console.log(result);
 
             if(must){   //验证必填项
-                result+=mustWrite($(this));
+                result+=mustWrite(curElement);
+            }
+
+            if(digit){ //验证数字
+                result+=digitTest(curElement.val());
             }
 
             if(stringLength){  //验证字数
@@ -437,8 +459,8 @@ $(document).ready(function(){
 
     testVal($("#name"),true,false);  //测试姓名的必填性
     testVal($("#email"),true,true);  //测试邮箱的必填性和格式
-    testVal($("#tel"),true,false);  //测试电话的必填性
-    testVal($("#content"),true,false,10);  //测试内容的必填性，且字数不能超过100字
+    testVal($("#tel"),true,false,false,true);  //测试电话的必填性，且只能是数字
+    testVal($("#content"),true,false,100);  //测试内容的必填性，且字数不能超过100字
 
     /*begin通用*/
     /*begin 上下浮动按钮*/
