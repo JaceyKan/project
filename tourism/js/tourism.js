@@ -256,34 +256,44 @@ $(document).ready(function(){
 
     // begin团队Team--成员切换
     //切换到下一个成员
-    $("#nextMember").click(function () {
+    $(".nextMember").click(function () {
         var curFirst=$(".firstSection").next();
         var curLast=$(".lastSection").next();
-        //console.log(curLast);
+        // console.log("begin");
+        // console.log(curFirst);
+        // console.log(curLast);
+        // console.log("end");
+
 
         if(curLast.length === 0){ //如果为0，说明已到达最后
+            // console.log("hello");
+            //$(".lastMember").click();
             return;
         }
 
-        $(".firstSection").slideUp();
-        curLast.slideDown();
+        $(".firstSection").hide();
+        curLast.fadeIn();
 
         $("#team ul li").removeClass("firstSection lastSection");
         curFirst.addClass("firstSection");
         curLast.addClass("lastSection");
+        console.log("结束了");
     });
 
     //切换到上一个成员
-    $("#lastMember").click(function () {
+    $(".lastMember").click(function () {
         var curFirst=$(".firstSection").prev();
         var curLast=$(".lastSection").prev();
 
         if(curFirst.length === 0){  //如果为0，说明已到达最顶端
+            // $(".nextMember").click();
+            //curFirst=$(".firstSection").next();
+            //curLast=$(".lastSection").next();
             return;
         }
 
-        curFirst.slideDown();
-        $(".lastSection").slideUp();
+        curFirst.fadeIn();
+        $(".lastSection").hide();
 
         $("#team ul li").removeClass("firstSection lastSection");
         curFirst.addClass("firstSection");

@@ -186,6 +186,14 @@
     position: relative;
 }
 
+@media (max-width: 767px){
+    #aboutUs #profile{
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
 #aboutUs #imgWrap{
     position: absolute;
     top: -10%;
@@ -378,6 +386,48 @@
 
 #team .hideMember{
     display: none;
+}
+
+@media (max-width: 767px) {
+    #team ul li, #team ul .lastSection{
+        //display: inline-block;
+        width: 33.3%;
+        float: left;
+        margin: 0;
+        border: none;
+        //border: 4px solid blue;
+    }
+
+    #team ul{
+        //border: 1px solid red;
+        width: 90%;
+        margin: 0 auto;
+        //float: left;
+    }
+
+    #slideShowTeam{
+        position: relative;
+        //border: 3px solid yellow;
+        float: left;
+    }
+
+    #team #slideShowTeam i.fa{
+        position: absolute;
+        top: 50%;
+        //background-color: blue;
+        width: 5%;
+        padding: 0;
+        display: inline;
+    }
+
+    #team #slideShowTeam i.lastMember{
+        left: 0;
+        text-align: right;
+    }
+
+    #team #slideShowTeam i.nextMember{
+        right: 0;
+    }
 }
 /*end团队板块*/
 
